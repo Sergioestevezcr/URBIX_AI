@@ -108,10 +108,6 @@ Proyecto académico · Prototipo conceptual e informativo.
 
 ---
 
-## 🔗 Sistema de informacion de la pagina 
-
-🌐 https://estudiantes.is.escuelaing.edu.co/~1000114329/urbix_ai/index.html
----
 
 ## 🌐 Acceso al sitio web
 
