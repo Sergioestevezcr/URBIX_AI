@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URBIX AI — Plataforma Inteligente de Optimización Semafórica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ BARRA DE NAVEGACION ═══════════════════════ -->
+  <header class="barra-navegacion" id="barra-navegacion">
+    <div class="nav-interna">
+      <a href="#inicio" class="marca-nav">
+        <svg class="icono-marca-nav" viewBox="0 0 48 48" fill="none">
+          <path d="M24 3L42 10.5V26C42 35.5 33 42.5 24 44.5C15 42.5 6 35.5 6 26V10.5Z" fill="#1E4F8A" />
+          <rect x="13" y="10" width="5" height="13" rx="1" fill="#7ED957" opacity="0.9" />
+          <rect x="20" y="7" width="5" height="16" rx="1" fill="#3CB371" opacity="0.9" />
+          <rect x="27" y="9" width="5" height="14" rx="1" fill="#2A6BC4" opacity="0.9" />
+          <line x1="17" y1="23" x2="12" y2="27" stroke="#7ED957" stroke-width="1.5" />
+          <line x1="27" y1="23" x2="32" y2="27" stroke="#7ED957" stroke-width="1.5" />
+          <circle cx="11" cy="27" r="1.8" fill="#7ED957" />
+          <circle cx="33" cy="27" r="1.8" fill="#7ED957" />
+          <rect x="21" y="23" width="6" height="13" rx="2" fill="#1F2933" />
+          <circle cx="24" cy="26.5" r="1.5" fill="#E53935" />
+          <circle cx="24" cy="30" r="1.5" fill="#FBC02D" />
+          <circle cx="24" cy="33.5" r="1.5" fill="#43A047" />
+          <path d="M10 38Q24 33 38 38" stroke="#FBC02D" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        </svg>
+        <span class="texto-marca-nav">URBIX <span>AI</span></span>
+      </a>
+
+      <nav class="enlaces-nav" id="enlaces-nav">
+        <a href="#empresa" class="enlace-nav" data-section="empresa">Nuestra Empresa</a>
+        <a href="#proyecto" class="enlace-nav" data-section="proyecto">Nuestro Proyecto</a>
+        <a href="#inversionistas" class="enlace-nav" data-section="inversionistas">Inversionistas</a>
+      </nav>
+
+      <button class="menu-movil" id="menu-movil" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ PORTADA ═══════════════════════ -->
+  <section class="portada" id="inicio">
+    <div class="fondo-portada">
+      <div class="rejilla-circuito"></div>
+      <div class="resplandor resplandor-1"></div>
+      <div class="resplandor resplandor-2"></div>
+    </div>
+    <div class="contenido-portada contenedor">
+      <div class="sobrelinea-portada">
+        <span class="punto-pulso"></span>
+        Plataforma · Ciudad Inteligente · Bogotá 2026
+      </div>
+      <h1 class="titulo-portada">
+        Semáforos que<br><span class="acento-portada">piensan.</span>
+      </h1>
+      <p class="subtitulo-portada">Optimización semafórica con inteligencia artificial para reducir la congestión
+        vehicular en
+        Colombia. Datos reales. Arquitectura adaptativa. Impacto medible.</p>
+      <div class="estadisticas-portada">
+        <div class="dato-portada">
+          <span class="dato-portada-num">#7</span>
+          <span class="dato-portada-etiqueta">Mundial congestión<br>TomTom 2025</span>
+        </div>
+        <div class="divisor-dato-portada"></div>
+        <div class="dato-portada">
+          <span class="dato-portada-num">153h</span>
+          <span class="dato-portada-etiqueta">Perdidas/año<br>por conductor</span>
+        </div>
+        <div class="divisor-dato-portada"></div>
+        <div class="dato-portada">
+          <span class="dato-portada-num">$600M</span>
+          <span class="dato-portada-etiqueta">USD pérdidas<br>anuales · BID</span>
+        </div>
+        <div class="divisor-dato-portada"></div>
+        <div class="dato-portada">
+          <span class="dato-portada-num">18.9</span>
+          <span class="dato-portada-etiqueta">km/h velocidad<br>promedio Bogotá</span>
+        </div>
+      </div>
+      <div class="acciones-portada">
+        <a href="#empresa" class="boton boton-principal">Conocer el proyecto</a>
+        <a href="#proyecto" class="boton boton-contorno">Ver prototipo</a>
+      </div>
+    </div>
+    <div class="indicador-desplazamiento">
+      <span>Desplazar</span>
+      <div class="flecha-desplazamiento"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECCION: NUESTRA EMPRESA ═══════════════════════ -->
+  <main id="empresa" class="ancla-seccion">
+
+    <!-- SUB-NAV empresa -->
+    <div class="subnavegacion subnavegacion-fija" id="subnavegacion-empresa">
+      <div class="contenedor">
+        <div class="interior-subnavegacion">
+          <span class="titulo-subnavegacion">Nuestra Empresa</span>
+          <div class="enlaces-subnavegacion">
+            <a href="#resumen" class="enlace-subnavegacion">Resumen</a>
+            <a href="#solucion" class="enlace-subnavegacion">Solución</a>
+            <a href="#equipo" class="enlace-subnavegacion">Equipo</a>
+            <a href="#interdisciplinario" class="enlace-subnavegacion">Enfoque</a>
+            <a href="#canvas" class="enlace-subnavegacion">Canvas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUMEN -->
+    <section class="seccion-contenido" id="resumen">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-azul">Resumen del Proyecto</div>
+          <h2 class="titulo-seccion">¿Qué es <span class="c-blue">URBIX AI?</span></h2>
+        </div>
+        <div class="dos-columnas">
+          <div class="columna-texto">
+            <p class="body-text">URBIX AI es una plataforma tecnológica de optimización semafórica basada en
+              inteligencia artificial, diseñada para transformar la movilidad urbana en Colombia.</p>
+            <p class="body-text mt-16">El sistema procesa datos de cámaras, sensores IoT y patrones históricos de
+              tráfico para sincronizar intersecciones semafóricas de forma autónoma y adaptativa, en tiempo real.</p>
+            <p class="body-text mt-16">A diferencia del sistema actual (SSIB), URBIX AI no solo reacciona:
+              <strong>predice</strong> la congestión antes de que ocurra.
+            </p>
+          </div>
+          <div class="columna-tarjetas">
+            <div class="tarjeta-info ti-azul">
+              <div class="icono-ti">🚦</div>
+              <div class="titulo-ti">Problema</div>
+              <p class="texto-ti">Colombia es el país más congestionado del mundo (TomTom 2025). Bogotá: #7 global, 153h
+                perdidas/año.</p>
+            </div>
+            <div class="tarjeta-info ti-verde">
+              <div class="icono-ti">🧠</div>
+              <div class="titulo-ti">Solución</div>
+              <p class="texto-ti">IA predictiva sobre la infraestructura existente. Optimización proactiva +
+                priorización
+                de emergencias.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjetas de problema -->
+        <div class="rejilla-problemas mt-48">
+          <div class="tarjeta-problema">
+            <div class="numero-problema">01</div>
+            <h3 class="titulo-problema">1.691 intersecciones</h3>
+            <p class="descripcion-problema">Bogotá tiene 1.691 intersecciones semaforizadas. Muchas presentan fallas
+              crónicas de
+              mantenimiento (Concejo de Bogotá, 2025).</p>
+          </div>
+          <div class="tarjeta-problema">
+            <div class="numero-problema">02</div>
+            <h3 class="titulo-problema">País #1 en congestión</h3>
+            <p class="descripcion-problema">Colombia fue el país más congestionado del mundo en 2025, con 48.8% de
+              congestión
+              promedio según TomTom Traffic Index.</p>
+          </div>
+          <div class="tarjeta-problema">
+            <div class="numero-problema">03</div>
+            <h3 class="titulo-problema">18.9 km/h velocidad</h3>
+            <p class="descripcion-problema">Velocidad promedio en Bogotá 2025. En hora pico, 10 km pueden tardar 37
+              minutos. 3
+              ciudades colombianas en el top 15 mundial.</p>
+          </div>
+          <div class="tarjeta-problema">
+            <div class="numero-problema">04</div>
+            <h3 class="titulo-problema">Sin priorización activa</h3>
+            <p class="descripcion-problema">Ambulancias, bomberos y policía quedan atrapados en el mismo tráfico. El
+              sistema actual
+              no puede priorizarlos.</p>
+          </div>
+          <div class="tarjeta-problema">
+            <div class="numero-problema">05</div>
+            <h3 class="titulo-problema">$600M USD en pérdidas</h3>
+            <p class="descripcion-problema">La congestión vehicular genera pérdidas de más de USD $600 millones anuales
+              en Bogotá
+              (Banco Interamericano de Desarrollo).</p>
+          </div>
+          <div class="tarjeta-problema">
+            <div class="numero-problema">06</div>
+            <h3 class="titulo-problema">Sin analítica avanzada</h3>
+            <p class="descripcion-problema">Las secretarías de movilidad toman decisiones sin predicciones IA, datos en
+              tiempo real
+              ni analítica predictiva de patrones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section class="seccion-contenido fondo-oscuro" id="solucion">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-verde">Solución Propuesta</div>
+          <h2 class="titulo-seccion c-white">IA que <span class="c-greenl">predice,</span><br>no solo reacciona.</h2>
+        </div>
+        <div class="rejilla-arquitectura">
+          <div class="tarjeta-arquitectura">
+            <div class="numero-arquitectura c-greenl">01</div>
+            <h3 class="titulo-arquitectura">Capa Física</h3>
+            <p class="descripcion-arquitectura">Sensores de flujo vehicular y cámaras de videodetección en
+              intersecciones. Captura de
+              densidad, velocidad y conteo en tiempo real.</p>
+          </div>
+          <div class="flecha-arquitectura">→</div>
+          <div class="tarjeta-arquitectura">
+            <div class="numero-arquitectura c-greenl">02</div>
+            <h3 class="titulo-arquitectura">Procesamiento IA</h3>
+            <p class="descripcion-arquitectura">Algoritmo de Machine Learning que analiza patrones históricos y
+              condiciones en tiempo
+              real para predecir y optimizar el flujo vehicular.</p>
+          </div>
+          <div class="flecha-arquitectura">→</div>
+          <div class="tarjeta-arquitectura">
+            <div class="numero-arquitectura c-greenl">03</div>
+            <h3 class="titulo-arquitectura">Control Semafórico</h3>
+            <p class="descripcion-arquitectura">Ajuste automático de tiempos semafóricos. Priorización activa de
+              vehículos de
+              emergencia mediante protocolos de comunicación directa.</p>
+          </div>
+          <div class="flecha-arquitectura">→</div>
+          <div class="tarjeta-arquitectura">
+            <div class="numero-arquitectura c-greenl">04</div>
+            <h3 class="titulo-arquitectura">Panel Analítico</h3>
+            <p class="descripcion-arquitectura">Panel interactivo para secretarías de movilidad. Reportes, métricas en
+              tiempo real,
+              alertas automáticas y datos para planeación urbana.</p>
+          </div>
+        </div>
+
+        <div class="fila-funcionalidades mt-48">
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">🔮</span>
+            <span>Predicción de horas pico con ML</span>
+          </div>
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">🚑</span>
+            <span>Priorización de emergencias</span>
+          </div>
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">📊</span>
+            <span>Panel para alcaldías</span>
+          </div>
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">⚡</span>
+            <span>Ajuste automático en tiempo real</span>
+          </div>
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">🔔</span>
+            <span>Alertas automáticas de incidentes</span>
+          </div>
+          <div class="item-funcionalidad">
+            <span class="icono-funcionalidad">🌿</span>
+            <span>Reducción de emisiones CO₂</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="seccion-contenido" id="equipo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-azul">Integrantes del Proyecto</div>
+          <h2 class="titulo-seccion">Las personas detrás de <span class="c-blue">URBIX AI.</span></h2>
+        </div>
+        <div class="rejilla-equipo">
+          <div class="tarjeta-equipo">
+            <div class="foto-equipo">
+              <div class="avatar-equipo">DP</div>
+            </div>
+            <div class="info-equipo">
+              <div class="insignia-rol-equipo">Co-Fundador</div>
+              <h3 class="nombre-equipo">Dereck Páez</h3>
+              <p class="descripcion-equipo">Visión estratégica, relaciones B2G con gobierno distrital, desarrollo de
+                negocio y
+                liderazgo de la startup. Gestión de licitaciones SECOP y acercamientos institucionales a secretarías de
+                movilidad.</p>
+              <div class="habilidades-equipo">
+                <span class="etiqueta-habilidad">Estrategia B2G</span>
+                <span class="etiqueta-habilidad">Negocios</span>
+                <span class="etiqueta-habilidad">Gestión de Proyectos</span>
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-equipo">
+            <div class="foto-equipo">
+              <div class="avatar-equipo" style="background: linear-gradient(135deg, #3CB371, #43A047);">SS
+              </div>
+            </div>
+            <div class="info-equipo">
+              <div class="insignia-rol-equipo">Co-Fundador</div>
+              <h3 class="nombre-equipo">Sergio Soriano</h3>
+              <p class="descripcion-equipo">Arquitectura del sistema, integración tecnológica, diseño de la plataforma
+                de
+                optimización semafórica e infraestructura de datos en la nube. Backend y APIs del sistema.</p>
+              <div class="habilidades-equipo">
+                <span class="etiqueta-habilidad">Sistemas</span>
+                <span class="etiqueta-habilidad">Arquitectura en Nube</span>
+                <span class="etiqueta-habilidad">Desarrollo Backend</span>
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-equipo">
+            <div class="foto-equipo">
+              <div class="avatar-equipo" style="background: linear-gradient(135deg, #2A6BC4, #1E4F8A);">DU
+              </div>
+            </div>
+            <div class="info-equipo">
+              <div class="insignia-rol-equipo">Co-Fundador</div>
+              <h3 class="nombre-equipo">Diego Urrego</h3>
+              <p class="descripcion-equipo">Desarrollo del modelo de IA, algoritmos adaptativos de tráfico, simulaciones
+                y
+                validación técnica del sistema de optimización. Visión computacional y análisis de datos.</p>
+              <div class="habilidades-equipo">
+                <span class="etiqueta-habilidad">Inteligencia Artificial</span>
+                <span class="etiqueta-habilidad">Machine Learning</span>
+                <span class="etiqueta-habilidad">Visión Computacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENFOQUE INTERDISCIPLINARIO -->
+    <section class="seccion-contenido fondo-claro" id="interdisciplinario">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-verde">Enfoque Interdisciplinario</div>
+          <h2 class="titulo-seccion">Cada área, un <span class="c-green">aporte fundamental.</span></h2>
+          <p class="subtitulo-seccion">URBIX AI integra múltiples disciplinas de ingeniería. La fortaleza del proyecto
+            radica
+            en esta sinergia.</p>
+        </div>
+        <div class="rejilla-disciplinas">
+          <div class="tarjeta-disciplina">
+            <div class="encabezado-disciplina">
+              <div class="icono-disciplina" style="background: linear-gradient(135deg,#7ED957,#3CB371);">🧠</div>
+              <h3 class="titulo-disciplina">Inteligencia Artificial</h3>
+            </div>
+            <ul class="lista-disciplina">
+              <li>Diseño del modelo ML para predicción de patrones de tráfico.</li>
+              <li>Algoritmo adaptativo que aprende del comportamiento vehicular por intersección.</li>
+              <li>Visión computacional para análisis de flujo con cámaras.</li>
+              <li>Entrenamiento con datos reales del Observatorio de Movilidad de Bogotá.</li>
+              <li>Sistema de priorización inteligente para vehículos de emergencia.</li>
+            </ul>
+          </div>
+          <div class="tarjeta-disciplina">
+            <div class="encabezado-disciplina">
+              <div class="icono-disciplina" style="background: linear-gradient(135deg,#2A6BC4,#1E4F8A);">⚙️</div>
+              <h3 class="titulo-disciplina">Ingeniería de Sistemas</h3>
+            </div>
+            <ul class="lista-disciplina">
+              <li>Arquitectura de microservicios en nube (AWS/GCP) escalable.</li>
+              <li>Desarrollo del backend: APIs REST, base de datos de series de tiempo.</li>
+              <li>Integración con controladores semafóricos del SSIB existente.</li>
+              <li>Panel web para secretarías: visualización, alertas, reportes.</li>
+              <li>Gestión de infraestructura IoT: sensores y cámaras en campo.</li>
+            </ul>
+          </div>
+          <div class="tarjeta-disciplina">
+            <div class="encabezado-disciplina">
+              <div class="icono-disciplina" style="background: linear-gradient(135deg,#E53935,#C62828);">🔒</div>
+              <h3 class="titulo-disciplina">Ciberseguridad</h3>
+            </div>
+            <ul class="lista-disciplina">
+              <li>Cifrado extremo a extremo en transmisión de datos sensores–servidores.</li>
+              <li>Autenticación multifactor para usuarios del panel institucional.</li>
+              <li>Protección contra DDoS y accesos no autorizados a controladores.</li>
+              <li>Cumplimiento Ley 1581 de 2012 (protección de datos personales).</li>
+              <li>Auditorías periódicas y planes de respaldo ante fallos o ataques.</li>
+            </ul>
+          </div>
+          <div class="tarjeta-disciplina">
+            <div class="encabezado-disciplina">
+              <div class="icono-disciplina" style="background: linear-gradient(135deg,#FBC02D,#F57F17);">📊</div>
+              <h3 class="titulo-disciplina">Estadística y Datos</h3>
+            </div>
+            <ul class="lista-disciplina">
+              <li>Análisis estadístico de las 1.691 intersecciones para identificar las más críticas.</li>
+              <li>Modelos de series de tiempo (ARIMA, LSTM) para predicción de horas pico.</li>
+              <li>Definición de KPIs: tiempo de espera, velocidad promedio, incidentes.</li>
+              <li>Diseño del experimento piloto con metodología A/B en intersecciones.</li>
+              <li>Análisis de impacto económico y de reducción de emisiones CO₂.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANVAS -->
+    <section class="seccion-contenido" id="canvas">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-azul">Modelo de Negocio</div>
+          <h2 class="titulo-seccion">Lienzo de <span class="c-blue">modelo de negocio.</span></h2>
+        </div>
+        <div class="rejilla-canvas">
+          <div class="celda-canvas cc-alta" style="grid-area: socios;">
+            <div class="etiqueta-cc">Socios Clave</div>
+            <ul class="lista-cc">
+              <li>Secretaría Distrital de Movilidad (SDM)</li>
+              <li>Fabricantes de semáforos (Siemens, Sutec)</li>
+              <li>Alcaldías municipales</li>
+              <li>ETB (telecomunicaciones)</li>
+              <li>IDU</li>
+            </ul>
+          </div>
+          <div class="celda-canvas" style="grid-area: actividades;">
+            <div class="etiqueta-cc">Actividades Clave</div>
+            <ul class="lista-cc">
+              <li>Desarrollo y mantenimiento del software IA</li>
+              <li>Instalación de sensores y cámaras</li>
+              <li>Análisis de datos en tiempo real</li>
+              <li>Actualización continua del modelo ML</li>
+            </ul>
+          </div>
+          <div class="celda-canvas cc-propuesta" style="grid-area: valor;">
+            <div class="etiqueta-cc">Propuesta de Valor</div>
+            <p class="cc-propuesta-text">Optimización semafórica con IA para reducir la congestión vehicular.
+              Priorización de
+              emergencias y analítica avanzada para planeación urbana.</p>
+          </div>
+          <div class="celda-canvas" style="grid-area: relacion;">
+            <div class="etiqueta-cc">Relación con Clientes</div>
+            <ul class="lista-cc">
+              <li>Contratos a largo plazo B2G</li>
+              <li>Soporte técnico continuo</li>
+              <li>Reportes periódicos a alcaldías</li>
+              <li>Panel institucional</li>
+            </ul>
+          </div>
+          <div class="celda-canvas" style="grid-area: segmentos;">
+            <div class="etiqueta-cc">Segmentos de Clientes</div>
+            <ul class="lista-cc">
+              <li>Alcaldías y secretarías de movilidad</li>
+              <li>Ministerio de Transporte</li>
+              <li>Gobiernos locales colombianos</li>
+              <li>Municipios LATAM (año 4+)</li>
+            </ul>
+          </div>
+          <div class="celda-canvas" style="grid-area: recursos;">
+            <div class="etiqueta-cc">Recursos Clave</div>
+            <ul class="lista-cc">
+              <li>Ingenieros en IA y Sistemas</li>
+              <li>Software de visión computacional</li>
+              <li>Hardware: cámaras, sensores IoT</li>
+              <li>Infraestructura cloud</li>
+            </ul>
+          </div>
+          <div class="celda-canvas" style="grid-area: canales;">
+            <div class="etiqueta-cc">Canales</div>
+            <p class="texto-cc">Licitaciones SECOP · Colombia Compra Eficiente · Ferias Ciudad Inteligente · Convenios
+              con
+              alcaldías · Presentaciones institucionales</p>
+          </div>
+          <div class="celda-canvas cc-costos" style="grid-area: costos;">
+            <div class="etiqueta-cc">Estructura de Costos</div>
+            <p class="texto-cc">IA: $87M COP · Piloto: $45M COP · Legal: $18.3M COP · Operativo: $54.6M COP</p>
+            <strong class="total-cc">Capital semilla total: $205M COP</strong>
+          </div>
+          <div class="celda-canvas cc-ingresos" style="grid-area: ingresos;">
+            <div class="etiqueta-cc">Fuentes de Ingresos</div>
+            <p class="texto-cc">SaaS $4.5M/inters./mes · Implementación $45M COP · Mantenimiento $18M/año · Datos
+              $8M/mes
+              · Licitaciones $500–800M COP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════ SECCION: NUESTRO PROYECTO ═══════════════════════ -->
+  <div id="proyecto" class="ancla-seccion">
+
+    <div class="subnavegacion" id="subnavegacion-proyecto">
+      <div class="contenedor">
+        <div class="interior-subnavegacion">
+          <span class="titulo-subnavegacion">Nuestro Proyecto</span>
+          <div class="enlaces-subnavegacion">
+            <a href="#prototipo" class="enlace-subnavegacion">Prototipo</a>
+            <a href="#video" class="enlace-subnavegacion">Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROTOTIPO -->
+    <section class="seccion-contenido fondo-oscuro" id="prototipo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-verde">Prototipo Digital</div>
+          <h2 class="titulo-seccion c-white">Maqueta de la <span class="c-greenl">aplicación.</span></h2>
+          <p class="subtitulo-seccion" style="color:rgba(255,255,255,0.5)">Explora el prototipo interactivo diseñado en
+            Figma.
+            Visualiza el flujo completo de la plataforma URBIX AI.</p>
+        </div>
+        <div class="contenedor-maqueta" id="caja-maqueta">
+          <div class="interior-maqueta">
+            <div class="icono-maqueta">📱</div>
+            <h3 class="titulo-maqueta">Prototipo Digital — URBIX AI</h3>
+            <p class="descripcion-maqueta">Haz clic en el botón para abrir el prototipo interactivo en Marvel</p>
+            <a href="https://marvelapp.com/35ajgcf6" target="_blank" class="boton boton-principal boton-maqueta">
+              Abrir Prototipo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="seccion-contenido" id="video">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="placa-seccion placa-azul">Video explicativo</div>
+          <h2 class="titulo-seccion">Cómo funciona <span class="c-blue">URBIX AI.</span></h2>
+          <p class="subtitulo-seccion">El video explica el funcionamiento completo del sistema y cómo responde al
+            problema de
+            movilidad en Bogotá.</p>
+        </div>
+
+        <!-- IFRAME YOUTUBE — REEMPLAZA EL SRC CON TU ENLACE REAL -->
+        <div class="contenedor-video">
+          <div class="marco-video" id="marco-video">
+            <div class="capa-video">
+              <div class="boton-reproducir" id="boton-reproducir">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="11" fill="rgba(30,79,138,0.9)" />
+                  <path d="M10 8.5l6 3.5-6 3.5V8.5z" fill="white" />
+                </svg>
+              </div>
+              <div class="meta-video">
+                <p class="titulo-video">URBIX AI — Presentación del Proyecto</p>
+                <p class="subtitulo-video">Clic para reproducir · YouTube</p>
+              </div>
+            </div>
+
+            <iframe id="yt-iframe" width="560" height="315"
+              src="https://www.youtube.com/embed/_wShiQ0UsHQ?si=hEzShfx1zr2V2yKg" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══════════════════════ SECCION: INVERSIONISTAS ═══════════════════════ -->
+  <section class="seccion-inversionistas" id="inversionistas">
+    <div class="contenedor">
+      <div class="encabezado-seccion">
+        <div class="placa-seccion placa-dorada">Oportunidad de Inversión</div>
+        <h2 class="titulo-seccion">Invierte en el <span class="c-gold">futuro de las ciudades.</span></h2>
+        <p class="subtitulo-seccion">URBIX AI es una solución tecnológica con alto potencial de impacto y rentabilidad.
+          Descubre nuestro plan de negocios, proyecciones financieras y estrategia de crecimiento.</p>
+      </div>
+      <div class="contenedor-inversionistas">
+        <div class="tarjeta-inversion">
+          <div class="icono-inversion">💼</div>
+          <h3 class="titulo-inversion">Documentación para Inversionistas</h3>
+          <p class="descripcion-inversion">Accede al documento completo que incluye:</p>
+          <ul class="lista-inversion">
+            <li>✓ Análisis de mercado y oportunidades</li>
+            <li>✓ Modelo de negocio y proyecciones financieras</li>
+            <li>✓ Equipo y experiencia</li>
+            <li>✓ Roadmap y estrategia de crecimiento</li>
+            <li>✓ Rondas de inversión y términos</li>
+          </ul>
+          <a href="https://estudiantes.is.escuelaing.edu.co/~1000114329/urbix_ai/docs/inversionistas_urbix_ai_2026.pdf"
+            target="_blank" class="boton boton-principal boton-inversion">
+            📄 Descargar Documento de Inversionistas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="interior-pie">
+        <div class="marca-pie">
+          <div class="marca-nav">
+            <svg class="icono-marca-nav" viewBox="0 0 48 48" fill="none">
+              <path d="M24 3L42 10.5V26C42 35.5 33 42.5 24 44.5C15 42.5 6 35.5 6 26V10.5Z" fill="#1E4F8A" />
+              <rect x="13" y="10" width="5" height="13" rx="1" fill="#7ED957" opacity="0.9" />
+              <rect x="20" y="7" width="5" height="16" rx="1" fill="#3CB371" opacity="0.9" />
+              <rect x="27" y="9" width="5" height="14" rx="1" fill="#2A6BC4" opacity="0.9" />
+              <rect x="21" y="23" width="6" height="13" rx="2" fill="#1F2933" />
+              <circle cx="24" cy="26.5" r="1.5" fill="#E53935" />
+              <circle cx="24" cy="30" r="1.5" fill="#FBC02D" />
+              <circle cx="24" cy="33.5" r="1.5" fill="#43A047" />
+            </svg>
+            <span class="texto-marca-nav">URBIX <span>AI</span></span>
+          </div>
+          <p class="lema-pie">Plataforma Inteligente de Optimización Semafórica · Bogotá, Colombia · 2026</p>
+        </div>
+        <div class="equipo-pie">
+          <p class="etiqueta-pie">Equipo</p>
+          <p>Sergio Soriano · Diego Urrego</p>
+        </div>
+      </div>
+      <div class="base-pie">
+        <p>© 2026 URBIX AI. Propiedad intelectual del equipo fundador.</p>
+        <p class="fuentes-pie">Datos: TomTom Traffic Index 2025 · BID · SDM Bogotá · Concejo de Bogotá · DNP</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
